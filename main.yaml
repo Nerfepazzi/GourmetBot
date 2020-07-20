@@ -1,0 +1,29 @@
+# Conversation example for GourmetBot
+
+settings:
+    name: GourmentBot
+
+slots:
+    - name
+    - confirmacion
+    - orden
+
+conversations:
+    - 'gourmentbot.yaml'
+
+strategies:
+    name:
+        - say "Hola ¿cúal es tu nombre?"
+        - input name
+    connfirmacion:
+        - say "¿Puedo tomar su orden?"
+        - input confirmacion | yesno
+    orden:
+        - say "¿Cual seria su orden? Recomendamos la fruta de temporada"
+        - input orden
+
+
+script:
+    - loop_slots
+    - if blue==True then solve orden
+    - say "Adios {}".format(name)
