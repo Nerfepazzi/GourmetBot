@@ -8,14 +8,11 @@ slots:
     - confirmacion
     - orden
 
-conversations:
-    - 'gourmentbot.yaml'
-
 strategies:
     name:
-        - say "Hola ¿cúal es tu nombre?"
+        - say "Hola ¿cual es tu nombre?"
         - input name
-    connfirmacion:
+    confirmacion:
         - say "¿Puedo tomar su orden?"
         - input confirmacion | yesno
     orden:
