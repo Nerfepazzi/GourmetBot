@@ -25,5 +25,5 @@ strategies:
 
 script:
     - loop_slots
-    - if blue==True then solve orden
+    - if orden==True then solve orden
     - say "Adios {}".format(name)
